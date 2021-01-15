@@ -1,4 +1,4 @@
-package com.training.kafka.KafkaTraining.config.properties;
+package com.training.kafka.KafkaTraining.config.kafka.properties;
 
 import lombok.Data;
 

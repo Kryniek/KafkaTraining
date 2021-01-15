@@ -1,7 +1,6 @@
 package com.training.kafka.KafkaTraining.producer;
 
 import com.training.kafka.KafkaTraining.config.kafka.properties.KafkaProperties;
-import com.training.kafka.KafkaTraining.model.Message;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -10,11 +9,11 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class MessageProducer {
-    private final KafkaTemplate<String, Object> template;
+public class StringProducer {
+    private final KafkaTemplate<String, String> template;
     private final KafkaProperties kafkaProperties;
 
-    public void send(Message message) {
-        template.send(kafkaProperties.getTopic().getMessageTopic(), message);
+    public void send(String message) {
+        template.send(kafkaProperties.getTopic().getStringTopic(), message);
     }
 }

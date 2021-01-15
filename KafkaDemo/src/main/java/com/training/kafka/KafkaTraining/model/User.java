@@ -9,8 +9,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Message {
+public class User {
     private String id;
     private String field1;
     private String field2;
+    private String field3;
 }

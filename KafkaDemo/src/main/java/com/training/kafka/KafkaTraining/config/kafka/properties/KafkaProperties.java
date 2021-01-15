@@ -1,4 +1,4 @@
-package com.training.kafka.KafkaTraining.config.properties;
+package com.training.kafka.KafkaTraining.config.kafka.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -11,4 +11,5 @@ public class KafkaProperties {
     private String bootstrapServers;
     private ConsumerProperties consumer;
     private TopicProperties topic;
+    private ClientProperties client;
 }

@@ -1,8 +1,16 @@
 training:
   kafka:
     bootstrap-servers: localhost:9092
+    client:
+      id: kafka-demo
     consumer:
       group-id: test-group
       auto-offset-reset: earliest
     topic:
-      test-topic: test-topic
+      string-topic: string-topic
+      message-topic: message-topic
+      user-topic: user-topic
+  scheduler:
+    enable-string-producer-tester: false
+    enable-message-producer-tester: false
+    enable-user-producer-tester: false

@@ -1,7 +1,6 @@
 package com.training.kafka.KafkaTraining.controller;
 
-import com.training.kafka.KafkaTraining.model.Message;
-import com.training.kafka.KafkaTraining.producer.MessageProducer;
+import com.training.kafka.KafkaTraining.producer.StringProducer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api/messages")
+@RequestMapping("api/strings")
 @RequiredArgsConstructor
-public class MessageController {
-    private final MessageProducer messageProducer;
+public class StringController {
+    private final StringProducer stringProducer;
 
     @PostMapping
-    public void send(@RequestBody Message message) {
-        messageProducer.send(message);
+    public void send(@RequestBody String message) {
+        stringProducer.send(message);
     }
 }
